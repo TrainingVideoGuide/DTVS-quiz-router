@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DTVS Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+      background: #f2f5f8;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 420px;
+      margin: auto;
+    }
+    button {
+      background: #0875c9;
+      color: white;
+      border: 0;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>DTVS QUIZ CHALLENGE</h2>
+    <p>Click below to start your quiz.</p>
+    <button onclick="startQuiz()">START MY QUIZ</button>
+  </div>
+
+  <script>
+    const quizLinks = [
+      "https://forms.cloud.microsoft/r/5ZEK2apY4r?origin=lprLink",
+      "https://forms.cloud.microsoft/r/mztZip8YYG?origin=lprLinkK",
+      "https://forms.cloud.microsoft/r/TARh1TaN27?origin=lprLink",
+      "https://forms.cloud.microsoft/r/pDWFCYDUKQ?origin=lprLink",
+      "https://forms.cloud.microsoft/r/U1KUa143rd?origin=lprLink"
+    ];
+
+    function startQuiz() {
+      const randomIndex = Math.floor(Math.random() * quizLinks.length);
+      window.location.href = quizLinks[randomIndex];
+    }
+  </script>
+</body>
+</html>
