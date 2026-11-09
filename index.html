@@ -1,38 +1,59 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>DTVS Quiz</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DTVS Quiz Challenge</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 60px 20px;
-      background: #f2f5f8;
+      padding: 50px 20px;
+      background: #eef3f8;
     }
+
     .box {
       background: white;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 420px;
+      padding: 35px 20px;
+      border-radius: 15px;
+      max-width: 450px;
       margin: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
+
+    h1 {
+      color: #174b78;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
     button {
       background: #0875c9;
       color: white;
-      border: 0;
-      padding: 15px 25px;
+      border: none;
+      padding: 16px 30px;
       border-radius: 8px;
       font-size: 18px;
+      font-weight: bold;
       cursor: pointer;
+    }
+
+    button:hover {
+      background: #055a9c;
     }
   </style>
 </head>
+
 <body>
   <div class="box">
-    <h2>DTVS QUIZ CHALLENGE</h2>
-    <p>Click below to start your quiz.</p>
+    <h1>DTVS QUIZ CHALLENGE</h1>
+    <p>Welcome!</p>
+    <p>Click below to start your randomly assigned quiz.</p>
     <button onclick="startQuiz()">START MY QUIZ</button>
   </div>
 
