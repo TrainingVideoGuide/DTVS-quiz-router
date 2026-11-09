@@ -1,79 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DTVS Quiz Challenge</title>
 
-<title>KIA Activities Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px 20px;
+      background: #eef3f8;
+    }
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f4f7;
-  text-align: center;
-  padding: 35px 15px;
-}
-.container {
-  background: white;
-  max-width: 430px;
-  margin: 40px auto;
-  padding: 30px 20px;
-  border-radius: 15px;
-}
-button {
-  background: #1769aa;
-  color: white;
-  border: none;
-  padding: 16px 28px;
-  font-size: 18px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-</style>
+    .box {
+      background: white;
+      padding: 35px 20px;
+      border-radius: 15px;
+      max-width: 450px;
+      margin: auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #174b78;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    button {
+      background: #0875c9;
+      color: white;
+      border: none;
+      padding: 16px 30px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #055a9c;
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
+  <div class="box">
+    <h1>DTVS QUIZ CHALLENGE</h1>
+    <p>Welcome!</p>
+    <p>Click below to start your randomly assigned quiz.</p>
+    <button onclick="startQuiz()">START MY QUIZ</button>
+  </div>
 
-<h2>KIA ACTIVITIES</h2>
-<h3>Interactive Quiz Challenge</h3>
+  <script>
+    const quizLinks = [
+      "https://forms.cloud.microsoft/r/5ZEK2apY4r?origin=lprLink",
+      "https://forms.cloud.microsoft/r/mztZip8YYG?origin=lprLinkK",
+      "https://forms.cloud.microsoft/r/TARh1TaN27?origin=lprLink",
+      "https://forms.cloud.microsoft/r/pDWFCYDUKQ?origin=lprLink",
+      "https://forms.cloud.microsoft/r/U1KUa143rd?origin=lprLink"
+    ];
 
-<p>Welcome!</p>
-<p>Click below to receive your randomly
-assigned quiz questions.</p>
-
-<button onclick="startQuiz()">
-START MY QUIZ
-</button>
-
-<p id="message"></p>
-
-</div>
-
-<script>
-
-const quizLinks = [
-  "https://forms.cloud.microsoft/r/5ZEK2apY4r?origin=lprLink",
-  "https://forms.cloud.microsoft/r/mztZip8YYG?origin=lprLink",
-  "https://forms.cloud.microsoft/r/TARh1TaN27?origin=lprLinkE",
-  "https://forms.cloud.microsoft/r/pDWFCYDUKQ?origin=lprLink"
-  "https://forms.cloud.microsoft/r/U1KUa143rd?origin=lprLink"
-];
-
-function startQuiz() {
-
-  const randomIndex =
-    Math.floor(Math.random() * quizLinks.length);
-
-  const selectedQuiz = quizLinks[randomIndex];
-
-  document.getElementById("message").innerText =
-    "Your quiz is ready. Redirecting...";
-
-  window.location.href = selectedQuiz;
-}
-
-</script>
+    function startQuiz() {
+      const randomIndex = Math.floor(Math.random() * quizLinks.length);
+      window.location.href = quizLinks[randomIndex];
+    }
+  </script>
 </body>
 </html>
