@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>KIA Activities Quiz</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  text-align: center;
+  padding: 35px 15px;
+}
+.container {
+  background: white;
+  max-width: 430px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  border-radius: 15px;
+}
+button {
+  background: #1769aa;
+  color: white;
+  border: none;
+  padding: 16px 28px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h2>KIA ACTIVITIES</h2>
+<h3>Interactive Quiz Challenge</h3>
+
+<p>Welcome!</p>
+<p>Click below to receive your randomly
+assigned quiz questions.</p>
+
+<button onclick="startQuiz()">
+START MY QUIZ
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+
+const quizLinks = [
+  "https://forms.cloud.microsoft/r/5ZEK2apY4r?origin=lprLink",
+  "https://forms.cloud.microsoft/r/mztZip8YYG?origin=lprLink",
+  "https://forms.cloud.microsoft/r/TARh1TaN27?origin=lprLinkE",
+  "https://forms.cloud.microsoft/r/pDWFCYDUKQ?origin=lprLink"
+  "https://forms.cloud.microsoft/r/U1KUa143rd?origin=lprLink"
+];
+
+function startQuiz() {
+
+  const randomIndex =
+    Math.floor(Math.random() * quizLinks.length);
+
+  const selectedQuiz = quizLinks[randomIndex];
+
+  document.getElementById("message").innerText =
+    "Your quiz is ready. Redirecting...";
+
+  window.location.href = selectedQuiz;
+}
+
+</script>
+</body>
+</html>
